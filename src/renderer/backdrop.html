@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Backdrop</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: transparent;
+      }
+
+      .backdrop {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        cursor: default;
+      }
+
+      .backdrop-image {
+        position: absolute;
+        inset: -24px;
+        width: calc(100% + 48px);
+        height: calc(100% + 48px);
+        object-fit: cover;
+        filter: blur(36px) saturate(1.08);
+        transform: scale(1.04);
+        opacity: 0;
+        transition: opacity 120ms ease;
+      }
+
+      .backdrop-image.ready {
+        opacity: 1;
+      }
+
+      .backdrop-scrim {
+        position: absolute;
+        inset: 0;
+      }
+
+      [data-theme='light'] .backdrop-scrim {
+        background: rgba(250, 250, 250, 0.22);
+      }
+
+      [data-theme='dark'] .backdrop-scrim {
+        background: rgba(0, 0, 0, 0.28);
+      }
+
+      html:not([data-theme]) .backdrop-scrim {
+        background: rgba(0, 0, 0, 0.24);
+      }
+
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme='dark']) .backdrop-scrim {
+          background: rgba(250, 250, 250, 0.22);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="backdrop" class="backdrop" aria-hidden="true">
+      <img id="backdrop-image" class="backdrop-image" alt="" />
+      <div class="backdrop-scrim"></div>
+    </div>
+    <script type="module" src="./backdrop/main.ts"></script>
+  </body>
+</html>

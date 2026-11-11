@@ -1,0 +1,184 @@
+/*
+ * Atom One Light / Atom One Dark design tokens.
+ * Applied via data-theme on documentElement (synced from macOS system appearance).
+ */
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  --bg-app: #fafafa;
+  --bg-surface: #ffffff;
+  --bg-surface-muted: #f0f0f0;
+  --bg-sidebar: #ededed;
+  --bg-sidebar-active: rgba(64, 120, 242, 0.12);
+  --bg-elevated: #ffffff;
+  --bg-chip: #e5e5e6;
+  --bg-input: #ffffff;
+  --bg-selected: #dbebff;
+  --bg-warning: #fff4e6;
+  --bg-danger-soft: #ffecec;
+
+  --text-primary: #383a42;
+  --text-secondary: #696c77;
+  --text-muted: #a0a1a7;
+  --text-sidebar: #383a42;
+  --text-sidebar-muted: #696c77;
+  --text-on-accent: #ffffff;
+
+  --border: rgba(56, 58, 66, 0.12);
+  --border-strong: rgba(56, 58, 66, 0.2);
+
+  --accent: #4078f2;
+  --accent-hover: #2f66d0;
+  --accent-soft: rgba(64, 120, 242, 0.12);
+
+  --danger: #e45649;
+  --success: #50a14f;
+  --warning: #c18401;
+
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg-app: #282c34;
+  --bg-surface: #21252b;
+  --bg-surface-muted: #2c313a;
+  --bg-sidebar: #21252b;
+  --bg-sidebar-active: rgba(97, 175, 239, 0.14);
+  --bg-elevated: #2c313a;
+  --bg-chip: #3e4451;
+  --bg-input: #1e2227;
+  --bg-selected: #3e4451;
+  --bg-warning: #3a3228;
+  --bg-danger-soft: #3a2a2a;
+
+  --text-primary: #abb2bf;
+  --text-secondary: #828997;
+  --text-muted: #5c6370;
+  --text-sidebar: #abb2bf;
+  --text-sidebar-muted: #5c6370;
+  --text-on-accent: #282c34;
+
+  --border: rgba(171, 178, 191, 0.12);
+  --border-strong: rgba(171, 178, 191, 0.22);
+
+  --accent: #61afef;
+  --accent-hover: #4d9cdc;
+  --accent-soft: rgba(97, 175, 239, 0.14);
+
+  --danger: #e06c75;
+  --success: #98c379;
+  --warning: #e5c07b;
+
+  --shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+}
+
+/* Fallback before theme IPC resolves (match system) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+
+    --bg-app: #282c34;
+    --bg-surface: #21252b;
+    --bg-surface-muted: #2c313a;
+    --bg-sidebar: #21252b;
+    --bg-sidebar-active: rgba(97, 175, 239, 0.14);
+    --bg-elevated: #2c313a;
+    --bg-chip: #3e4451;
+    --bg-input: #1e2227;
+    --bg-selected: #3e4451;
+    --bg-warning: #3a3228;
+    --bg-danger-soft: #3a2a2a;
+
+    --text-primary: #abb2bf;
+    --text-secondary: #828997;
+    --text-muted: #5c6370;
+    --text-sidebar: #abb2bf;
+    --text-sidebar-muted: #5c6370;
+    --text-on-accent: #282c34;
+
+    --border: rgba(171, 178, 191, 0.12);
+    --border-strong: rgba(171, 178, 191, 0.22);
+
+    --accent: #61afef;
+    --accent-hover: #4d9cdc;
+    --accent-soft: rgba(97, 175, 239, 0.14);
+
+    --danger: #e06c75;
+    --success: #98c379;
+    --warning: #e5c07b;
+
+    --shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    color-scheme: light;
+
+    --bg-app: #fafafa;
+    --bg-surface: #ffffff;
+    --bg-surface-muted: #f0f0f0;
+    --bg-sidebar: #ededed;
+    --bg-sidebar-active: rgba(64, 120, 242, 0.12);
+    --bg-elevated: #ffffff;
+    --bg-chip: #e5e5e6;
+    --bg-input: #ffffff;
+    --bg-selected: #dbebff;
+    --bg-warning: #fff4e6;
+    --bg-danger-soft: #ffecec;
+
+    --text-primary: #383a42;
+    --text-secondary: #696c77;
+    --text-muted: #a0a1a7;
+    --text-sidebar: #383a42;
+    --text-sidebar-muted: #696c77;
+    --text-on-accent: #ffffff;
+
+    --border: rgba(56, 58, 66, 0.12);
+    --border-strong: rgba(56, 58, 66, 0.2);
+
+    --accent: #4078f2;
+    --accent-hover: #2f66d0;
+    --accent-soft: rgba(64, 120, 242, 0.12);
+
+    --danger: #e45649;
+    --success: #50a14f;
+    --warning: #c18401;
+
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+  }
+}
+
+[data-theme='light'],
+[data-theme='dark'],
+:root {
+  /* Legacy aliases used across components */
+  --paper: var(--bg-app);
+  --card: var(--bg-surface);
+  --ink: var(--text-primary);
+  --muted: var(--text-muted);
+  --sidebar: var(--bg-sidebar);
+  --sidebar-text: var(--text-sidebar);
+  --accent-dark: var(--accent-hover);
+  --line: var(--border);
+  --sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+}
